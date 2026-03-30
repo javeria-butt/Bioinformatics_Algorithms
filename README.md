@@ -67,4 +67,8 @@ With the completion of **Module 4**, this repository comes to a wrap! You have m
 * **Language:** Python 3.x
 * **Focus:** Computational Genomics, String Algorithms, Stochastic Optimization.
 
+---
+### 📬 Connect with me:
+
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/javeria-butt)
 
