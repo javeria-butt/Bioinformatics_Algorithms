@@ -1,3 +1,4 @@
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 # 🧬 Bioinformatics_Algorithms: The Computational Skeleton
 
 This repository is a systematic exploration of the **computational skeleton** of biology. While libraries like **BioPython** often feel like a "cheat sheet" for solving complex genetic problems, this project pulls back the curtain to show how the logic actually functions.
