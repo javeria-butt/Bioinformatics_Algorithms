@@ -5,29 +5,27 @@ Concept: Moving beyond deterministic limits to handle biological noise and local
 This module addresses the "Zero-Probability" problem in DNA profiling and 
 introduces randomized searching to ensure we find the globally optimal 
 motifs across a genomic landscape.
-
-🏗️ Phase 4.1: Greedy Motif Search with Pseudocounts
-Concept: Implementing Laplace's Rule of Succession to stabilize the Profile Matrix.
-
-In standard counting, if a specific nucleotide is absent from a position, its 
-probability becomes 0. Since we multiply probabilities, one missing base 
-"kills" the entire score. Pseudocounts add a small buffer (+1) to every base 
-to ensure no biological signal is ignored due to a small sample size.
-
-🛠️ Implementation
-This algorithm incorporates a stabilized profile to maintain sensitivity in 
-complex datasets.
 """
+
+# 🏗️ Phase 4.1: Greedy Motif Search with Pseudocounts
+# Concept: Implementing Laplace's Rule of Succession to stabilize the Profile Matrix.
+#
+# In standard counting, if a specific nucleotide is absent from a position, its 
+# probability becomes 0. Since we multiply probabilities, one missing base 
+# "kills" the entire score. Pseudocounts add a small buffer (+1) to every base 
+# to ensure no biological signal is ignored due to a small sample size.
 
 def ProfileWithPseudocounts(motifs):
     """
+    🛠️ Implementation
     Calculates the profile matrix by applying a +1 pseudocount to all 
-    nucleotide counts before normalization.
+    nucleotide counts before normalization. This algorithm incorporates 
+    a stabilized profile to maintain sensitivity in complex datasets.
     """
     t = len(motifs)
     k = len(motifs[0])
     # Initialize with 1 to prevent zero-probability multiplications
-    profile = {nt: [1] * k for nt in "ACGT"}  
+    profile = {nt: [1] * k for nt in "ACGT"}
     
     for motif in motifs:
         for i, nt in enumerate(motif):
@@ -44,7 +42,7 @@ def GreedyMotifSearchWithPseudocounts(DNA, k, t):
     """
     n = len(DNA[0])
     best_motifs = [DNA[i][:k] for i in range(t)]
-
+    
     for i in range(n - k + 1):
         motifs = [DNA[0][i:i + k]]
         for j in range(1, t):
@@ -56,7 +54,7 @@ def GreedyMotifSearchWithPseudocounts(DNA, k, t):
             best_motifs = motifs
 
     return best_motifs
-```
+
 """
 🏗️ Phase 4.2: Randomized Motif Search
 Concept: Utilizing stochastic exploration to bypass local optima.
@@ -66,16 +64,13 @@ that looks acceptable within a small range but miss the global optimum.
 Randomized Motif Search starts with random k-mer coordinates and iteratively 
 refines them. Running this random process multiple times allows for a 
 comprehensive exploration of the genomic landscape.
-
-🛠️ Implementation
-This algorithm uses stochastic initialization and iterative refinement to 
-converge on the best possible consensus sequence.
 """
 
 import random
 
 def RandomMotifs(DNA, k):
     """
+    🛠️ Implementation
     Randomized Selection: Unlike deterministic algorithms, this starts by 
     randomly selecting k-mers (substrings of length k) from each sequence.
     """
@@ -115,7 +110,7 @@ def RandomizedMotifSearch(DNA, k, t):
             # Step 5: Stop iterating when no further improvement is observed
             return best_motifs
 
-# Example Execution
+# Example Execution Setup
 dna_input = [
     "CGCCCCTCTCGGGGGTGTTCAGTAAACGGCCA",
     "GGGCGAGGTATGTGTAAGTGCCAAGGTGCCAG",
@@ -124,15 +119,12 @@ dna_input = [
     "AATCCACCAGCTCCACGTGCAATGTTGGCCTA"
 ]
 
-print("Executing Randomized Motif Search...")
-print(f"Discovered Motifs: {RandomizedMotifSearch(dna_input, 8, 5)}")
-```
-"""
+""" 
 🏁 REPOSITORY MILESTONE: PROJECT COMPLETION
-------------------------------------------
+
 The algorithmic architecture for this genomic analysis toolkit is now complete. 
-From initial sequence analysis to stochastic motif discovery, the 'Concrete 
-Slurry' has set, and the 'Final Touches' are applied.
+From initial sequence analysis to stochastic motif discovery, the 
+'Concrete Slurry' has set, and the 'Final Touches' are applied.
 
 🌟 PROJECT SUMMARY:
 - Module 1: Foundational Genome Replication (Skew, Forward/Reverse Strands)
@@ -146,21 +138,19 @@ regulatory regions in circular bacterial genomes. By combining deterministic
 logic with probabilistic stability, we can now identify conserved signals 
 that drive life at the molecular level.
 
-------------------------------------------
-THE END OF THE INITIAL JOURNEY.
-CODE COMMITTED. KNOWLEDGE ARCHIVED.
-------------------------------------------
+THE END OF THE INITIAL JOURNEY. CODE COMMITTED. KNOWLEDGE ARCHIVED.
 """
 
 def ProjectStatus():
-    """
-    Returns the final status of the Bioinformatics journey.
-    """
+    """ Returns the final status of the Bioinformatics journey. """
     modules_completed = 4
     repository_status = "STABLE"
     optimization_level = "MAXIMUM"
-    
     return f"Journey complete across {modules_completed} Modules. Repo is {repository_status}."
 
 # Final Execution
-print(ProjectStatus())
+if __name__ == "__main__":
+    print("Executing Randomized Motif Search...")
+    # Discovered motifs will vary slightly due to stochastic nature
+    print(f"Discovered Motifs: {RandomizedMotifSearch(dna_input, 8, 5)}")
+    print(ProjectStatus())
