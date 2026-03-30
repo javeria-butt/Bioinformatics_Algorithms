@@ -120,7 +120,3 @@ search_motif = 'CGCG'
 print(f"Coordinates found: {locate_pattern(search_motif, search_text)}")
 # Expected Output: [0, 16, 28, 38]
 ```
-
-
-print(f"Occurrence of {target_pattern}: {count_pattern(genome_text, target_pattern)}")
-# Output: 5
