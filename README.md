@@ -1,56 +1,69 @@
-# Bioinformatics_Algorithms
+# 🧬 Bioinformatics_Algorithms: The Computational Skeleton
 
-### The Architecture of Bioinformatics Algorithms
 This repository is a systematic exploration of the **computational skeleton** of biology. While libraries like **BioPython** often feel like a "cheat sheet" for solving complex genetic problems, this project pulls back the curtain to show how the logic actually functions.
 
-**My Two-Fold Intent:**
-1.  **Personal Code Base:** A structural archive of my journey learning how Python logic interacts with my primary interest—Biology.
-2.  **Algorithmic Transparency:** To demonstrate the raw logic behind popular biological libraries, moving from basic string manipulation to complex searching algorithms.
+### 🏗️ My Two-Fold Intent:
+* **Personal Code Base:** A structural archive of my journey learning how Python logic interacts with my primary interest—Biology.
+* **Algorithmic Transparency:** To demonstrate the raw logic behind popular biological libraries, moving from basic string manipulation to complex searching algorithms.
 
 ---
 
-## 🧬 Module 1: Substratum & Excavation
+### 📂 Module 1: Substratum & Excavation
 *Digging down deep into the foundational concepts of sequence analysis.*
 
-Before building upward, we must understand the fundamental interactions of DNA strings. This module covers the initial structural concepts that drive genomic analysis:
-* **Calculate Pattern:** Identifying specific sequences within a genome.
-* **Frequency Map of DNA Sequence:** Visualizing nucleotide distribution.
-* **Most Frequent K-mers:** Finding the recurring "words" in the genetic code.
-* **Complementary DNA String:** Generating the reverse complements essential for replication logic.
-* **Pattern Matching:** The basic search mechanics of bioinformatics.
-
-## 🧬 Module 2: The Structural Framework
-*Adding the steel rods—strengthening the logic for complex datasets.*
-
-As the concepts become more demanding, we implement more robust interpretations of genomic data to address the questions that arise during a researcher's journey:
-* **Symbol Array in DNA Seq:** Efficiently tracking nucleotide distribution.
-* **Extended SymbolArray:** Optimizing for speed and performance.
-* **Skew Array in DNA Seq:** Two methods explained for identifying DNA replication origins.
-* **Minimum Skew in DNA Seq:** Pinpointing the *oriC* in a DNA sequence.
-* **Hamming Distance:** Measuring the evolutionary "distance" between sequences.
-* **Approximate Pattern Matching:** Accounting for biological variation and mutations.
-
-## 🧬 Module 3: Structural Reinforcement
-*Adding the concrete slurry—integrating functions into an umbrella architecture.*
-
-In this module, we transition from isolated scripts to a modular system. We develop specialized functions that eventually merge into a powerful, "Umbrella" type of code:
-* **Basic Numpy Array Understanding:** Leveraging numerical Python for biological data.
-* **Nucleotide Frequencies & Profile Matrices:** Creating a mathematical "Profile" of DNA.
-* **Consensus Sequence:** Finding the "average" sequence from a DNA motif.
-* **Scoring DNA Motifs:** Quantifying the strength of biological patterns.
-* **Greedy Motif Search:** The "Finale"—a standalone function that integrates all the above logic into a Greedy Algorithm.
-
-## 🧬 Module 4: Finishing & Final Touch-ups
-*Coloring the building and completing the series finale.*
-
-The final module covers high-level algorithms used in real-world bioinformatics calculations, providing the final polish to our structural understanding:
-* **GreedyMotifSearch with Pseudocounts:** Refining search logic to account for rare occurrences.
-* **Randomized Motif Search:** Implementing stochastic methods for finding patterns in large datasets.
+| Phase | Algorithm | Logical Objective |
+| :--- | :--- | :--- |
+| **1.1** | **Pattern Calculation** | Identifies specific recurring sequences within a genome. |
+| **1.2** | **Frequency Mapping** | Visualizes nucleotide distribution across a DNA sequence. |
+| **1.3** | **Most Frequent K-mers** | Locates the most common genetic "words" ($k$-mers). |
+| **1.4** | **Complementary DNA** | Generates reverse complements essential for replication logic. |
+| **1.5** | **Pattern Matching** | Implements the basic search mechanics of bioinformatics. |
 
 ---
 
-### 🚀 The Wrap-Up
-With the completion of Module 4, this repository comes to a wrap! You have moved from the "dirt" of raw strings to the "finished building" of complex search algorithms.
+### 📂 Module 2: The Structural Framework
+*Adding the steel rods—strengthening the logic for complex datasets.*
 
+| Phase | Algorithm | Logical Objective |
+| :--- | :--- | :--- |
+| **2.1** | **Symbol Array** | Efficiently tracks nucleotide distribution within sliding windows. |
+| **2.2** | **Skew Array** | Calculates $G - C$ skew to identify DNA replication origins. |
+| **2.3** | **Minimum Skew** | Pinpoints the $oriC$ (Origin of Replication) in a sequence. |
+| **2.4** | **Hamming Distance** | Measures the evolutionary "distance" between two sequences. |
+| **2.5** | **Approximate Matching**| Accounts for biological variation and mutations in searches. |
+
+---
+
+### 📂 Module 3: Structural Reinforcement
+*Adding the concrete slurry—integrating functions into an umbrella architecture.*
+
+| Phase | Algorithm | Logical Objective |
+| :--- | :--- | :--- |
+| **3.1** | **Profile Matrices** | Creates a mathematical probability profile of a DNA set. |
+| **3.2** | **Consensus Sequence** | Finds the "average" or most representative sequence from a motif. |
+| **3.3** | **Scoring DNA Motifs** | Quantifies the strength/conservation of biological patterns. |
+| **3.4** | **Greedy Motif Search** | Integrates all modular logic into a standalone search algorithm. |
+
+---
+
+### 📂 Module 4: Probabilistic Optimization
+*Final touches—refining high-level algorithms for real-world noise.*
+
+| Phase | Algorithm | Logical Objective |
+| :--- | :--- | :--- |
+| **4.1** | **Greedy + Pseudocounts** | Refines search logic using Laplace's Rule to handle rare bases. |
+| **4.2** | **Randomized Search** | Implements stochastic methods to find motifs in large datasets. |
+| **4.3** | **Bayesian Stability** | Ensures no biological signal is "zeroed out" by small sample sizes. |
+
+---
+
+## 🚀 The Wrap-Up
+With the completion of **Module 4**, this repository comes to a wrap! You have moved from the "dirt" of raw strings to the "finished building" of complex search algorithms. This journey represents the transition from basic Python syntax to specialized Bioinformatics expertise.
+
+---
+
+### 🛠️ Technical Stack
+* **Language:** Python 3.x
+* **Focus:** Computational Genomics, String Algorithms, Stochastic Optimization.
 
 
